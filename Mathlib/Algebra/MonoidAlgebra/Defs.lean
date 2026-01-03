@@ -719,6 +719,7 @@ def uniqueRingEquiv [Unique M] : R[M] ≃+* R where
   toAddEquiv := coeffAddEquiv.trans .finsuppUnique
   map_mul' x y := (coeff_mul ..).trans <| by simp [Finsupp.sum_unique, Unique.eq_default]
 
+section curry
 variable [DecidableEq M]
 
 /-- A product monoid algebra is a nested monoid algebra. -/
@@ -750,6 +751,8 @@ lemma curryRingEquiv_single (m : M) (n : N) (r : R) :
 lemma curryRingEquiv_symm_single (m : M) (n : N) (r : R) :
     curryRingEquiv.symm (single m <| single n r) = (single (m, n) r) := by
   simp [curryRingEquiv]
+
+end curry
 
 variable [IsCancelMul M]
 
