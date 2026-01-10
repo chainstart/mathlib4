@@ -57,7 +57,7 @@ lemma mapDomain_injective (hf : Injective f) : Injective (mapDomain (R := R) f) 
   ofCoeff_injective.comp <| (Finsupp.mapDomain_injective hf).comp coeff_injective
 
 @[to_additive (dont_translate := R) (attr := simp) mapDomain_one]
-lemma mapDomain_one [One M] [One N] {F : Type*} [FunLike F M N] [OneHomClass F M N] (f : F) :
+theorem mapDomain_one [One M] [One N] {F : Type*} [FunLike F M N] [OneHomClass F M N] (f : F) :
     mapDomain f (1 : R[M]) = (1 : R[N]) := by
   simp [one_def]
 
