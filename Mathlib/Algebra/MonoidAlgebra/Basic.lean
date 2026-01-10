@@ -266,7 +266,7 @@ def domCongr (e : M ≃* N) : A[M] ≃ₐ[R] A[N] where
   commutes' _ := by ext; simp
 
 @[to_additive]
-lemma domCongr_toAlgHom (e : M ≃* N) : (domCongr R A e).toAlgHom = mapDomainAlgHom R A e := rfl
+theorem domCongr_toAlgHom (e : M ≃* N) : (domCongr R A e).toAlgHom = mapDomainAlgHom R A e := rfl
 
 @[to_additive (attr := simp)]
 lemma coeff_domCongr_apply (e : M ≃* N) (f : A[M]) (n : N) :
