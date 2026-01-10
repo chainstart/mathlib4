@@ -168,7 +168,7 @@ variable (M) in
 
 `Finsupp.mapRange` as an `AddEquiv`. -/]
 def mapRangeAddEquiv (e : R ≃+ S) : R[M] ≃+ S[M] where
-  toFun x :=  .mapRange e x
+  toFun x := .mapRange e x
   invFun x := .mapRange e.symm x
   left_inv x := by ext; simp
   right_inv x := by ext; simp
